@@ -1,0 +1,66 @@
+# Calculator
+It's just a simple calculator. Thanks for the help Kirk!
+a = 0
+b = 0
+
+def main():
+    print"This is a simple calculator"
+    print"This program won't be able to do complex formulas and will only be able"
+    print"to multiply, division, add, and subtract two numbers ONLY so I'm sorry"
+    lol = raw_input("To multiply put in '*', To divide put in '/', To add put in '+', To subtract put in '-' \n")
+    if lol == '*':
+        a = float(input("What is your 'a' value? \n"))
+        b = float(input("What is your 'b' value? \n"))
+        mult(a,b)
+    elif lol == '/':
+        a = float(input("What is your 'a' value? \n"))
+        b = float(input("What is your 'b' value? \n"))
+        divi(a,b)
+    elif lol == '+':
+        a = float(input("What is your 'a' value? \n"))
+        b = float(input("What is your 'b' value? \n"))
+        add(a,b)
+    elif lol == '-':
+        a = float(input("What is your 'a' value? \n"))
+        b = float(input("What is your 'b' value? \n"))
+        sub(a,b)
+    else:
+        print"---------------------------------------------------------"
+        print"Please try again"
+        print"---------------------------------------------------------"
+        main()
+#restart
+def start():
+    print"-------------------------------------------------------------"
+    print"Would you like to restart"
+    print"-------------------------------------------------------------"
+    go = raw_input("If yes put 'yes' for no put 'no' \n")
+    if go == 'yes':
+        main()
+    elif go == 'no':
+        print"goodbye!!"
+    else:
+        print"--------------------------------------------"
+        print "Please put in 'yes' or 'no'!"
+        print "-------------------------------------------"
+        start()
+#multiplication
+def mult(a,b):
+   print "Answer:", (a * b)
+   start()
+#division
+def divi(a,b):
+   print "Answer:", (a / b)
+   start()
+#add
+def add(a,b):
+    print "Answer:", (a + b)
+    start()
+#subtraction
+def sub(a,b):
+    print "Answer:", (a - b)
+    start()
+main()
+
+
+
